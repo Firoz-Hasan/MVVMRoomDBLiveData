@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp">
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+         <TextView
+                 android:id="@+id/contactName_TV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentStart="true"
+                 android:ellipsize="end"
+                 android:maxLines="1"
+                 android:text="Contact Name"
+                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                 android:layout_alignParentLeft="true"
+                 ></TextView>
+        <TextView
+                android:id="@+id/phone_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contactName_TV"
+                android:text="12345678"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
