@@ -1,4 +1,4 @@
-package com.fhd.roomdblivedatamvvm.model.roomdb
+package com.fhd.roomdblivedatamvvm.model.repository.roomDB
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

@@ -1,4 +1,4 @@
-package com.fhd.roomdblivedatamvvm.model.roomdb
+package com.fhd.roomdblivedatamvvm.model.repository.roomDB
 
 import android.content.Context
 import androidx.room.Database

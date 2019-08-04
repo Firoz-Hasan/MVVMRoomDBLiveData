@@ -3,9 +3,9 @@ package com.fhd.roomdblivedatamvvm.model.repository
 import android.app.Application
 import android.os.AsyncTask
 import androidx.lifecycle.LiveData
-import com.fhd.roomdblivedatamvvm.model.roomdb.Contact
-import com.fhd.roomdblivedatamvvm.model.roomdb.ContactDao
-import com.fhd.roomdblivedatamvvm.model.roomdb.ContactDatabase
+import com.fhd.roomdblivedatamvvm.model.repository.roomDB.Contact
+import com.fhd.roomdblivedatamvvm.model.repository.roomDB.ContactDao
+import com.fhd.roomdblivedatamvvm.model.repository.roomDB.ContactDatabase
 
 class ContactRepository(application: Application) {
 

@@ -11,7 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fhd.roomdblivedatamvvm.R
-import com.fhd.roomdblivedatamvvm.model.roomdb.Contact
+import com.fhd.roomdblivedatamvvm.model.repository.roomDB.Contact
 import com.fhd.roomdblivedatamvvm.view.adapters.ContactAdapter
 import com.fhd.roomdblivedatamvvm.viewmodel.ContactViewModel
 import kotlinx.android.synthetic.main.activity_main.*
@@ -118,8 +118,8 @@ class MainActivity : AppCompatActivity() {
             val newContact = Contact(
                 data!!.getStringExtra(AddEditContactActivity.EXTRA_CONTACTNAME),
                 data.getStringExtra(AddEditContactActivity.EXTRA_CONTACTPHONE)
-               
-                )
+
+            )
             contactViewModel.insert(newContact)
 
             Toast.makeText(this, "Note saved!", Toast.LENGTH_SHORT).show()
@@ -134,7 +134,7 @@ class MainActivity : AppCompatActivity() {
                 data!!.getStringExtra(AddEditContactActivity.EXTRA_CONTACTNAME),
                 data.getStringExtra(AddEditContactActivity.EXTRA_CONTACTPHONE)
 
-                )
+            )
             updateContact.id = data.getIntExtra(AddEditContactActivity.EXTRA_ID, -1)
             contactViewModel.update(updateContact)
 

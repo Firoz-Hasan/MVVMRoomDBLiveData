@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import com.fhd.roomdblivedatamvvm.model.repository.ContactRepository
-import com.fhd.roomdblivedatamvvm.model.roomdb.Contact
+import com.fhd.roomdblivedatamvvm.model.repository.roomDB.Contact
 
 class ContactViewModel(application: Application) : AndroidViewModel(application) {
     private var repository: ContactRepository = ContactRepository(application)

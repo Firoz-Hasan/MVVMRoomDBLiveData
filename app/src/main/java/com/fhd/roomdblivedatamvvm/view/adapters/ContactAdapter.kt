@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.fhd.roomdblivedatamvvm.R
-import com.fhd.roomdblivedatamvvm.model.roomdb.Contact
+import com.fhd.roomdblivedatamvvm.model.repository.roomDB.Contact
 import kotlinx.android.synthetic.main.contact_item.view.*
 
 class ContactAdapter : ListAdapter<Contact, ContactAdapter.ContactHolder>(DIFF_CALLBACK) {
