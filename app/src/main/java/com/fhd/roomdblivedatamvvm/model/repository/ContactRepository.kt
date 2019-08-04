@@ -20,17 +20,17 @@ class ContactRepository(application: Application) {
         allcontacts = contactDao.getAllContacts()
     }
 
-    fun insert(note: Contact) {
-        val insertContactAsyncTask = InsertContactAsyncTask(contactDao).execute(note)
+    fun insert(contact: Contact) {
+        val insertContactAsyncTask = InsertContactAsyncTask(contactDao).execute(contact)
     }
 
-    fun update(note: Contact) {
-        val updateContactAsyncTask = UpdateContactAsyncTask(contactDao).execute(note)
+    fun update(contact: Contact) {
+        val updateContactAsyncTask = UpdateContactAsyncTask(contactDao).execute(contact)
     }
 
 
-    fun delete(note: Contact) {
-        val deleteContactAsyncTask = DeleteContactAsyncTask(contactDao).execute(note)
+    fun delete(contact: Contact) {
+        val deleteContactAsyncTask = DeleteContactAsyncTask(contactDao).execute(contact)
     }
 
     fun deleteAllContacts() {
@@ -39,7 +39,7 @@ class ContactRepository(application: Application) {
         ).execute()
     }
 
-    fun getAllNotes(): LiveData<List<Contact>> {
+    fun getAllContacts(): LiveData<List<Contact>> {
         return allcontacts
     }
 

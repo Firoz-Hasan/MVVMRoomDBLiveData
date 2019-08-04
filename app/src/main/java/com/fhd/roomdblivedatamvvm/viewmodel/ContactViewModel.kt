@@ -7,9 +7,8 @@ import com.fhd.roomdblivedatamvvm.model.repository.ContactRepository
 import com.fhd.roomdblivedatamvvm.model.roomdb.Contact
 
 class ContactViewModel(application: Application) : AndroidViewModel(application) {
-    private var repository: ContactRepository =
-        ContactRepository(application)
-    private var allContacts: LiveData<List<Contact>> = repository.getAllNotes()
+    private var repository: ContactRepository = ContactRepository(application)
+    private var allContacts: LiveData<List<Contact>> = repository.getAllContacts()
 
     fun insert(contact: Contact) {
         repository.insert(contact)
