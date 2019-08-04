@@ -44,6 +44,11 @@ class ContactRepository(application: Application) {
     }
 
     companion object {
+
+        // room doesnt allow db operation in main thread , so we hv to use background thread
+        // if u write it in main thread the system will crush
+        
+
         private class InsertContactAsyncTask(contactDao: ContactDao) : AsyncTask<Contact, Unit, Unit>() {
             val contactDao = contactDao
 

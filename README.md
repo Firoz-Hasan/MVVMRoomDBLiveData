@@ -9,10 +9,16 @@ This is a experiment project which aims to provide fundamental idea about ANDROI
 * Room will map our db object to java object
 * COMPONENTS OF ROOM :
 * Entity : defines schema of db table   / a representation of a plan for db table
-* so it basically represnts table in sqlite db
+* so it basically represents table in sqlite db
 * DAO : contains method to access db(sqlite) meaning provide API for reading & writting
-* into db. It communicates with sqlite.[Room --> Sqlite <==> Dao] 
-* Database : db holder class which serves as a main access point
+* into db. It communicates with sqlite. we define all the
+* db operations want to made in this contact entity.[Room --> Sqlite <==> Dao] 
+* Database : It connects all this different parts like dao, entity 
+* and actual instance of db. so basically it is a
+* db holder class which serves as a main access point. we have to make singleton of this class
+* which means we cant create multiple instance of this db instead we always use same instance 
+* everywhere in our app.
+* Repository : provides abstraction layer of different data sources.
 *
 *
 * ViewModel : holding and preparing data for the UI 

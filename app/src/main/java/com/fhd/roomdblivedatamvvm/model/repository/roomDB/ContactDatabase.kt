@@ -18,6 +18,9 @@ abstract class ContactDatabase : RoomDatabase() {
         fun getInstance(context: Context): ContactDatabase? {
             if (instance == null) {
                 synchronized(ContactDatabase::class) {
+                    //why synchronized? bec one thread at a time can only access this method
+                    //in multithread environment two different threads can try to access
+                    //at the same time so synchronized prohibit/avoid this.
                     instance = Room.databaseBuilder(
                         context.applicationContext,
                         ContactDatabase::class.java, "note_database"

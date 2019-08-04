@@ -19,8 +19,8 @@ class ContactAdapter : ListAdapter<Contact, ContactAdapter.ContactHolder>(DIFF_C
             }
 
             override fun areContentsTheSame(oldItem: Contact, newItem: Contact): Boolean {
-                return oldItem.contact_name == newItem.contact_name &&
-                        oldItem.contact_phoneNumber == newItem.contact_phoneNumber
+                return oldItem.contact_name_db == newItem.contact_name_db &&
+                        oldItem.contact_phoneNumber_db == newItem.contact_phoneNumber_db
 
             }
         }
@@ -36,8 +36,8 @@ class ContactAdapter : ListAdapter<Contact, ContactAdapter.ContactHolder>(DIFF_C
     override fun onBindViewHolder(holder: ContactHolder, position: Int) {
         val currentContact: Contact = getItem(position)
 
-        holder.contactName_TV.text = currentContact.contact_name
-        holder.contactPhone_TV.text = currentContact.contact_phoneNumber
+        holder.contactName_TV.text = currentContact.contact_name_db
+        holder.contactPhone_TV.text = currentContact.contact_phoneNumber_db
     }
 
     fun getNoteAt(position: Int): Contact {

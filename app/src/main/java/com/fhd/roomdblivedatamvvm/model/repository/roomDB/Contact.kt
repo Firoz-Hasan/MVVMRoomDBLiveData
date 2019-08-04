@@ -5,10 +5,10 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "contact_table")
 data class Contact(
-    var contact_name: String,
-    var contact_phoneNumber: String
+    var contact_name_db: String,
+    var contact_phoneNumber_db: String
 ) {
-    //does it matter if these are private or not?
+
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
 }
