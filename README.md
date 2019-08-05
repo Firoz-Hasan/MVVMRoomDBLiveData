@@ -10,6 +10,9 @@ This is a experiment project which aims to provide fundamental idea about ANDROI
 * COMPONENTS OF ROOM :
 * Entity : defines schema of db table   / a representation of a plan for db table
 * so it basically represents table in sqlite db
+* data class (Entity) : We frequently create classes whose main purpose is to hold data
+* eikhane (entitiy means = table) banano hoise, table e column bosano hoise
+* Each @Entity class represents a table.
 * DAO : contains method to access db(sqlite) meaning provide API for reading & writting
 * into db. It communicates with sqlite. we define all the
 * db operations want to made in this contact entity.[Room --> Sqlite <==> Dao] 
