@@ -24,7 +24,7 @@ This is a experiment project which aims to provide fundamental idea about ANDROI
 * Repository : provides abstraction layer of different data sources.
 *
 *
-* ViewModel : holding and preparing data for the UI 
+* ViewModel : holding and preparing data for the UI / ViewModel stores UI-related data that isn't destroyed on app rotations.
 * SO activity / frag connects this 
 * viewmodel and gets all necessary data fm there and reporting user interaciton
 * to viewmodel and then viewmodel forward this user interaciton to underline layout 
