@@ -43,9 +43,14 @@ class MainActivity : AppCompatActivity() {
 
         contactRV.adapter = adapter
 
-        contactViewModel = ViewModelProviders.of(this).get(ContactViewModel::class.java)
+        // Get a new or existing ViewModel from the ViewModelProvider.
 
+        contactViewModel = ViewModelProviders.of(this).get(ContactViewModel::class.java)
+        // Add an observer on the LiveData returned by getAllContacts.
+        // The onChanged() method fires when the observed data changes and the activity is
+        // in the foreground.
         contactViewModel.getAllContacts().observe(this, Observer<List<Contact>> {
+            // Update the cached copy of the words in the adapter.
             adapter.submitList(it)
         })
 

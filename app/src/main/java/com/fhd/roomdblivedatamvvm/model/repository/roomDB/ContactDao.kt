@@ -3,6 +3,14 @@ package com.fhd.roomdblivedatamvvm.model.repository.roomDB
 import androidx.lifecycle.LiveData
 import androidx.room.*
 
+/*
+dao =  where we define all the db operations tht we want to make WORD entity
+* eikhane insert update delete kora hosse table e
+*A DAO (data access object) validates your SQL at compile-time and associate it with a method,
+* so you don't have to worry about the SQL again... all with simple annotations like @Insert!
+*
+* */
+
 @Dao
 interface ContactDao {
     @Insert
